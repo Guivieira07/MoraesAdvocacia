@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+}
+:root {
+    --cor-de-fundo: #121212;
+    --cor-do-texto: #e0e0e0; 
+    --cor-primaria: #756a44; 
+    --cor-secundaria: #756a44;; 
+    --cor-de-destaque: #c8a345; 
+    --cor-da-borda: #292929; 
+  }
+body {
+    overflow-x: hidden;
+}
+
+.navegacao {
+    position: fixed;
+    background-color: aliceblue;
+    width: 100%;
+    top: 0;
+    padding: 1.5rem;
+    z-index: 100;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 3rem;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #121212;
+    font-weight: 500;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.menu li a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: burlywood;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.3s;
+}
+
+.menu li a:hover::before {
+    transform: scaleX(1);
+}
+
+.cabecalho {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    font-size: 3.5rem;
+       color: #000;
+       font-weight: bold;
+       margin: 20 px;
+   }
+   span{
+    color: var(--cor-de-destaque);
+   }
+   .subtitulo-home{
+    font-size: 2rem;
+    color: #333;
+}
+.sobre{
+    padding: 6rem 2rem;
+}
+
+.sobre-titulo{
+    font-size: 3rem;
+    color: #292929;
+    text-align: center;
+    margin-bottom: 90px;
+}
+.sobre-caixa{
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    max-width: 700px;
+    margin: 10px auto;
+    border-radius: 16px;
+    border: 2px solid var(--cor-da-borda);
+    backdrop-filter: blur(30px);
+}
+
+.sobre-descricao{
+    text-align: justify;
+    font-size: 1.2rem;
+}
+
+.atuacao{
+padding:6rem 2rem;
+}
+.direitos-titulo{
+    font-size: 3rem;
+    color: var(--cor-da-borda);
+    text-align: center;
+    margin-bottom: 40px;
+}
+.direitos-caixa{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: center;
+}
+.direitos-imagem{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.direitos-card{
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius:16px ;
+    border: 2px solid var(--cor-da-borda);
+    backdrop-filter: blur(30px);
+    overflow-x: hidden;
+    transition: 0.5s all ease;
+    cursor: pointer;
+}
+
+.direitos-card:hover{
+    box-shadow: 0 10px 20px var(--cor-primaria);
+    transform: translatey(-10px) scale(1.03);
+}
+
+.direitos-conteudo{
+    padding: 1rem;
+}
+
+.subtitulo-direitos{
+    font-size: 2rem;
+    color: var(--cor-secundaria);
+}
+.direitos-descricao{
+    font-size: 1.2rem;
+    font-weight: 1.2rem;
+}
+
