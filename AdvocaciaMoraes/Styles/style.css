@@ -21,65 +21,63 @@ body {
     overflow-x: hidden;
 }
 
-.navegacao {
-    position: fixed;
-    background-color: aliceblue;
+.nav-container{
     width: 100%;
-    top: 0;
-    padding: 1.5rem;
-    z-index: 100;
+    height: 80px;
+    background-color: #ffffff;
+    padding: 0 2rem;
 }
-
-.menu {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    gap: 3rem;
-}
-
-.menu li a {
-    text-decoration: none;
-    color: #121212;
-    font-weight: 500;
+.navegacao{
     position: relative;
-    padding: 0.5rem 0;
 }
-
-.menu li a::before {
-    content: '';
+.logo{
+    width: 200px;
+    margin-top:15px ;
+}
+.menu{
     position: absolute;
-    width: 100%;
-    height: 2px;
-    background-color: burlywood;
-    bottom: 0;
-    left: 0;
-    transform: scaleX(0);
-    transition: transform 0.3s;
+    right: 0;
+    height: 80px;
+    line-height: 80px;
+    margin: 0;
+    display:inline-block;
+}
+.menu li{
+ display: inline-flex;
+    margin-left: 25px;
+  
+}
+.menu a{
+    text-decoration: none;
+    color: #333;
 }
 
-.menu li a:hover::before {
-    transform: scaleX(1);
+.main-banner{
+background-image:linear-gradient(rgba(0, 0, 0, 0.062), rgba(0, 0, 0, 0.295)),url(/Imagem/stfbranco.jpg);
+    background-position: center;
+    background-size: cover;
+    transform: scaleX(-1);
+    min-height: calc(100vh);
+    opacity: 0.9;
 }
 
-.cabecalho {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
 h1{
-    font-size: 3.5rem;
-       color: #000;
+    transform: scaleX(-1);
+    font-size:3rem;
+    text-align: center;
+       color: #ffffff;
        font-weight: bold;
-       margin: 20 px;
+       margin: 0 20px;
    }
    span{
     color: var(--cor-de-destaque);
    }
    .subtitulo-home{
-    font-size: 2rem;
-    color: #333;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #eee;
+    transform: scaleX(-1);
+    margin: 0 20px;
 }
 .sobre{
     padding: 6rem 2rem;
@@ -99,6 +97,7 @@ h1{
     border-radius: 16px;
     border: 2px solid var(--cor-da-borda);
     backdrop-filter: blur(30px);
+
 }
 
 .sobre-descricao{
@@ -116,8 +115,7 @@ padding:6rem 2rem;
     margin-bottom: 40px;
 }
 .direitos-caixa{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
     gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
@@ -130,6 +128,8 @@ padding:6rem 2rem;
 }
 
 .direitos-card{
+    display: block;
+    grid-row: repeat(auto-fit, minmax(300px, 1fr));
     background-color: rgba(255, 255, 255, 0.05);
     padding: 2rem;
     border-radius:16px ;
@@ -158,3 +158,29 @@ padding:6rem 2rem;
     font-weight: 1.2rem;
 }
 
+/*serviços*/
+.caracteristicas{
+    padding: 5rem 0;
+}
+.caracteristicas ul{
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+}
+.caracteristicas li{
+    flex: 1 1 200px;
+    list-style: none;
+    text-align: center;
+    padding:20px ;
+}
+.fas{
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+.fa-brain{
+    color: #ef296b;
+}
+.fa-user-tie{
+    color: #343a40;
+}
