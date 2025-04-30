@@ -86,7 +86,7 @@ body {
 }
 /* Botão hamburger */
 menu-toggle i {
-    transition: transform 0.3s ease;
+    transition: transform 0.8s ease-in-out;
   }
   
   .menu-toggle.active .fa-bars {
