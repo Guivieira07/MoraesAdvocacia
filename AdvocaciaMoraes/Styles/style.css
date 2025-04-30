@@ -244,14 +244,26 @@ position: relative;
 }
 .caracteristicas ul{
     display: flex;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
+    
 }
 .caracteristicas li{
     flex: 1 1 200px;
     list-style: none;
     text-align: center;
-    padding:20px ;
+    padding:10px;
+}
+
+.caixa-caracteristicas{
+  background-color: rgba(255, 255, 255, 0.05); 
+  padding: 2rem;
+  max-width: 700px;
+  margin: 10px auto;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); 
 }
 .fas{
     font-size: 60px;
