@@ -1,3 +1,19 @@
+/*botao aceitar cookies*/ 
+document.addEventListener('DOMContentLoaded', function () {
+    const cookieBanner = document.getElementById('cookie-banner');
+    const acceptBtn = document.getElementById('accept-cookies');
+
+    if (!localStorage.getItem('cookiesAccepted')) {
+        cookieBanner.style.display = 'block';
+    }
+
+    acceptBtn.addEventListener('click', function () {
+        localStorage.setItem('cookiesAccepted', 'true');
+        cookieBanner.style.display = 'none';
+    });
+});
+
+
 
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("whatsapp-form");
