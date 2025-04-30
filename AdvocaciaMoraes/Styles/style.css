@@ -254,12 +254,15 @@ position: relative;
     text-align: center;
     padding: 5px;
 }
+.caracteristicas p{
+  text-align: center;
+}
 
 .caixa-caracteristicas{
   background-color: rgba(255, 255, 255, 0.05); 
-  padding: 2rem;
-  max-width: 700px;
-  margin: 10px auto;
+  padding: 1rem;
+  max-width: 300px;
+  margin: 5px auto;
   border-radius: 16px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(20px);
