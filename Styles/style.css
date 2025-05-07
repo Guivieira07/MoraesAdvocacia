@@ -1,0 +1,499 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: "Poppins", serif;
+    overflow-x: hidden;
+}
+:root {
+    --cor-de-fundo: #121212;
+    --cor-do-texto: #e0e0e0; 
+    --cor-primaria: #756a44; 
+    --cor-secundaria: #756a44;; 
+    --cor-de-destaque: #c8a345; 
+    --cor-da-borda: #292929; 
+  }
+body {
+    overflow-x: hidden;
+}
+/*botao aceitar cookies*/
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #1c1c1c;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+  font-size: 14px;
+  z-index: 1000;
+  display: none;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.cookie-banner a {
+  color: #ffd700;
+  text-decoration: underline;
+}
+
+.cookie-banner button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  margin-left: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/*zap flutuante na tela*/
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    background-color: #25d366;
+    border-radius: 50px;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    transition: transform 0.2s ease-in-out;
+}
+
+.whatsapp-float img {
+    width: 25px;
+    height: 25px;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.05);
+}
+
+.whatsapp-float span {
+    font-size: 14px;
+}
+/* Botão hamburger */
+menu-toggle i {
+    transition: transform 0.8s ease-in-out;
+  }
+  
+  .menu-toggle.active .fa-bars {
+    display: none;
+  }
+  
+  .menu-toggle.active::before {
+    content: "\f00d";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    display: inline-block;
+  }
+
+/*navbar - menu*/
+ /* Logo */
+.logo {
+    width: 300px;
+    margin-top: 15px;
+  }
+  
+  /* Navbar */
+  .nav-container {
+    width: 100%;
+    height: 80px;
+    background-color: #ffffff;
+    padding: 0 2rem;
+    position: fixed;
+    z-index: 2;
+    box-shadow: 0 2px 10px #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* Navegação */
+  .navegacao {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  /* Menu principal */
+  .menu {
+    display: flex;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu li {
+    display: inline-flex;
+    margin-left: 25px;
+    list-style: none;
+  }
+  
+  .menu a {
+    text-decoration: none;
+    color: #333;
+    font-size: 15px;
+    padding-bottom: 3px;
+    transition: 0.5s ease-in;
+    border-bottom: 2px solid transparent;
+  }
+  
+  .menu a:hover {
+    border-bottom: 2px solid #74623b;
+  }
+  
+  /* Ícones redes sociais */
+  .social-icons {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .social-icons a {
+    color: #333;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    color: #74623b;
+  }
+  
+
+  .cabecalho {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/MoraesAdvocacia-main/AdvocaciaMoraes/Imagem/stfbranco.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.main-banner {
+    border-left: 2px solid #b18134;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 3rem;
+    margin-left: 3rem;
+    max-width: 600px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+.banner-conteudo h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.banner-conteudo h1 span {
+    color: #c5a100;
+}
+
+.subtitulo-home {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #f0f0f0;
+}
+.botoes-tags {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    height: 60px;
+    
+}
+
+.tag {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    display: inline-flex; 
+    align-items: center;  
+    gap: 0.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    vertical-align: middle;
+}
+
+.tag i {
+    font-size: 25px;
+position: relative;
+    top: 5px;
+}
+
+.sobre {
+    padding: 6rem 2rem;
+    color: #343a40; 
+}
+
+.sobre-titulo {
+    font-size: 3rem;
+    color: #525252; 
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.sobre-caixa {
+    background-color: rgba(255, 255, 255, 0.05); 
+    padding: 2rem;
+    max-width: 700px;
+    margin: 10px auto;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); 
+}
+
+.sobre-descricao {
+    text-align: justify;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+
+.caracteristicas{
+    padding: 5rem 0;
+}
+.caracteristicas ul{
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    
+}
+.caracteristicas li{
+    flex: 1 1 200px;
+    list-style: none;
+    text-align: center;
+    padding: 5px;
+}
+.caracteristicas p{
+  text-align: center;
+}
+
+.caixa-caracteristicas{
+  background-color: rgba(255, 255, 255, 0.05); 
+  padding: 1rem;
+  max-width: 300px;
+  margin: 5px auto;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); 
+}
+.fas{
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+.fa-brain{
+    color: #ef296b;
+}
+.fa-user-tie{
+    color: #343a40;
+}
+
+
+.atuacao{
+padding:6rem 2rem;
+}
+.direitos-titulo{
+    font-size: 3rem;
+    color: var(--cor-da-borda);
+    text-align: center;
+    margin-bottom: 40px;
+}
+.direitos-caixa {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: center;
+ 
+}
+.direitos-imagem{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.direitos-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
+    overflow-x: hidden;
+    transition: 0.5s all ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    margin-bottom: 15px;
+}
+
+.direitos-card:hover{
+    box-shadow: 0 10px 20px var(--cor-primaria);
+    transform: translatey(-10px) scale(1.03);
+}
+
+.direitos-conteudo{
+    padding: 1rem;
+    text-align: center;
+}
+.direitos-conteudo p {
+    text-align: justify;
+}
+.subtitulo-direitos{
+    font-size: 2rem;
+    color: var(--cor-secundaria);
+}
+.direitos-descricao{
+    font-size: 1.2rem;
+    font-weight: 1.2rem;
+}
+
+/*Serviços*/
+.titulo-servicos{
+    font-size: 3rem;
+    color: var(--cor-da-borda);
+    text-align: center;
+    margin-bottom: 40px;
+}
+.servicos-caixa{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.servicos-card{
+   
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
+    overflow-x: hidden;
+    transition: 0.5s all ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
+}
+
+.servicos-conteudo{
+    padding: 1rem;
+    text-align: justify;
+}
+.servicos-conteudo i{
+    color: var(--cor-da-borda);
+}
+.subtitulo-servicos{
+    font-size: 2rem;
+    color: var(--cor-da-borda);
+    border-bottom: 2px solid #a08f72;
+}
+.servicos-descricao{
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: 1.2rem;
+}
+
+
+/*Formulario contato*/
+
+.container-contatos {
+    text-align: center;
+    padding: 5rem 0 0rem 0; /* tirado o padding inferior */
+    background-color: #1e1e1e;
+    color: #f5f5f5;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .container-contatos h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #a08f72; /* marrom sofisticado */
+  }
+  
+  .container-contatos p {
+    font-size: 22px;
+    margin-bottom: 40px;
+    color: #ccc;
+  }
+  
+  .container-contatos input,
+  .container-contatos textarea {
+    width: 260px;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    margin: 0 10px 20px;
+    background-color: #2c2c2c;
+    color: #fff;
+  }
+  
+  .container-contatos textarea {
+    display: block;
+    margin: 0 auto 20px;
+    width: 540px;
+    height: 150px;
+  }
+  
+  .container-contatos input[type="submit"] {
+    display: block;
+    margin: 0 auto;
+    background-color: #5c4a2f; 
+    color: #fff;
+    font-weight: 600;
+    padding: 12px 40px;
+    border: none;
+    transition: background 0.3s ease-in-out;
+    cursor: pointer;
+    border-radius: 6px;
+  }
+  
+  .container-contatos input[type="submit"]:hover {
+    background-color: #4a3c26;
+  }
+  
+  /* footer */
+  footer {
+    text-align: center;
+    font-weight: 500;
+    margin: 0;
+    padding: 20px 0;
+    color: #ccc;
+    background-color: #1e1e1e;
+    font-family: 'Poppins', sans-serif;
+   
+  }
+  footer p{
+    padding: 15px;
+  }
+.cookies-link-html{
+  color: #fff;
+  text-decoration: none;
+  margin: 20px;
+  padding:5px;
+  border: 1px solid var(--cor-da-borda);
+}
